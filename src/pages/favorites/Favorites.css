@@ -1,0 +1,76 @@
+.notContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notContent>div {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    border: 2px solid var(--contrastColor);
+    background-color: var(--secondColor);
+}
+
+.notContent>p {
+    margin-top: 60px;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.notContent>p::before {
+    content: 'Nada aqui!';
+    font-family: Pacifico;
+    position: absolute;
+    top: -1em;
+    left: 2.6em;
+    color: var(--contrastColor);
+}
+
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.favCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 80%;
+}
+
+.favCards>div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 2em;
+    width: 100%;
+    height: 30vh;
+    border-radius: 20px;
+    /* background: #e0e0e0; */
+    box-shadow: 1px 1px 0.3em #d2d2d2;
+}
+.favCards>div>h2 {
+    font-family: Pacifico;
+    font-weight: 100;
+}
+.favCards>div>ul {
+    margin-left: 1em;
+}
+.favCards>div>ul>li {
+    list-style: none;
+}
+.favCards>div>h5 {
+    margin-left: 1.8em;
+    color: var(--contrastColor);
+}

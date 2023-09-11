@@ -1,0 +1,225 @@
+.activeFooter span {
+    opacity: 1;
+    transform: translateY(-25%);
+}
+
+.activeRotate {
+    transform: rotate(1turn) rotate(225deg) !important;
+    font-size: 2.7em !important;
+}
+
+.activeMove {
+    top: -58px;
+}
+
+.show {
+    opacity: 1 !important;
+    height: 70vh !important;
+}
+
+.activeContrastIcon {
+    transform: translateY(-15%);
+    transition: 500ms;
+}
+.activeContrastIcon>svg {
+    color: var(--contrastColor) !important;
+    position: relative;
+}
+
+.activeContrastIcon::after {
+    content: '';
+    position: absolute;
+    top: 26px;
+    transform: translateX(-16px);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--contrastColor);
+    transition: all 1s;
+}
+
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        /* height: 100vh; */
+        position: fixed;
+        bottom: 0;
+
+        background-color: var(--secondColor);
+        border-radius: 20px 20px 0 0;
+        border-top: 6px solid var(--bgColor);
+
+        z-index: 1;
+    }
+
+    footer>span {
+        width: 100%;
+        height: 100vh;
+        background: rgb(241, 244, 226);
+        background: linear-gradient(180deg, rgba(241, 244, 226, 0) 0%, rgba(255, 254, 255, 1) 27%);
+        opacity: 0;
+        position: absolute;
+        top: -10%;
+        transition: opacity 800ms;
+    }
+
+    .cartToggle {
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background-color: var(--contrastColor);
+        border: 5px solid var(--bgColor);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -27px;
+        z-index: 10;
+    }
+
+    .cartToggle>div {
+        transition: 800ms ease-in-out;
+        font-size: 2.1em;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        color: #ffffff;
+
+    }
+
+
+    .cartToggle>i {
+        position: absolute;
+        inset: 0;
+    }
+
+    .cartToggle>i:nth-child(1):before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: -23px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 3px -6px var(--bgColor);
+    }
+
+    .cartToggle>i:nth-child(1)::after {
+        content: '';
+        position: absolute;
+        top: 22px;
+        right: -23px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: -3px -6px var(--bgColor);
+    }
+
+    .cartToggle>i:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: -15px;
+        width: 18px;
+        height: 15px;
+        background-color: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 1px -8px var(--bgColor);
+        transform: scaleY(-100%);
+    }
+
+    .cartToggle>i:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: -15px;
+        width: 18px;
+        height: 15px;
+        background-color: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: -1px -8px var(--bgColor);
+        transform: scaleY(-100%);
+    }
+
+    .menu {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuLinks {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* .menuLinks>i:nth-child(3) {
+        width: 1.3em;
+    } */
+
+    .menuLinks>a:nth-child(2) {
+        margin-right: 2em;
+    }
+
+    .menuLinks>a:nth-child(3) {
+        margin-left: 2em;
+    }
+
+    .menuLinks>a>svg {
+        font-size: 1.5em;
+        color: rgb(164, 164, 164);
+    }
+
+    .menuLinks>a>div {
+        width: 28px;
+        height: 50px;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        cursor: pointer;
+    }
+
+    /* .menuLinks>i:nth-child(3)>div {
+        height: 0;
+    } */
+
+    .cartItems {
+        /* display: none; */
+        opacity: 0;
+        width: 100%;
+        height: 0;
+        background-color: var(--secondColor);
+        transition: 800ms;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+}

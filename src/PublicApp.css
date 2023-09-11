@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box;  */
+}
+
+:root {
+  --bgColor: #ffffff;
+  --secondColor: #f2f2f2;
+  --contrastColor: #F4921D
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    background-color: var(--frontColor);
+  }
+}
