@@ -26,7 +26,7 @@ const Component = styled.div`
 function TextInput({ type, sample, placeholder, onHandleChange }) {
     return (
             <Component>
-                <label>{sample}</label>
+                <label htmlFor={'#' + type}>{sample}</label>
                 <input id={type} type={type} onChange={onHandleChange} placeholder={placeholder}></input>
             </Component>
     )

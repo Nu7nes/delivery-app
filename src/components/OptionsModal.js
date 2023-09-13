@@ -27,6 +27,9 @@ const Component = styled.div`
         margin-left: 1.5rem;
         transform: translateY(-100%);
     }
+    >form{
+        margin: 1rem;
+    }
 `
 
 function OptionsModal({ item, onCloseOptions }) {
@@ -38,13 +41,12 @@ function OptionsModal({ item, onCloseOptions }) {
 
     function onHandleChecked(isChecked, index) {
         itensCopy[index] = !isChecked
-        console.log(itensCopy);
+        // console.log(itensCopy);
     }
 
     function handleAddItem(e) {
         e.preventDefault()
-        const selecteItems = []
-        itensCopy.map((item, index) => item ? selecteItems.push(ingredients[index]) : '')
+        const selecteItems = ingredients.filter((item, index) => itensCopy[index] ? item : '')
         const newItem = new Item(item.id, selecteItems)
         dispatch(add(JSON.stringify(newItem)))
     }
@@ -54,19 +56,16 @@ function OptionsModal({ item, onCloseOptions }) {
             <CloseButton id="close" onClick={onCloseOptions}>{<GrFormClose />}</CloseButton>
             <div className="image"></div>
             <h2>{item.flavor}</h2>
-            <ul>
-                <h4>Melhore sua pizza!</h4>
-                <form onSubmit={handleAddItem}>
-                    {item.ingredients.map((ingredient, index) => {
-                        return (<Checkbox key={index}
-                            index={index}
-                            data={ingredient}
-                            onHandleChecked={onHandleChecked} />)
-                    })}
-                    <Button type="submit">Adicionar</Button>
-                </form>
-
-            </ul>
+            <form onSubmit={handleAddItem}>
+            <h4>Melhore sua pizza!</h4>
+                {item.ingredients.map((ingredient, index) => {
+                    return (<Checkbox key={index}
+                        index={index}
+                        data={ingredient}
+                        onHandleChecked={onHandleChecked} />)
+                })}
+                <Button type="submit">Adicionar</Button>
+            </form>
         </Component>
     )
 }
