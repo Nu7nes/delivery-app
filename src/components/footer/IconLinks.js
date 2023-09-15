@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { BiHome, BiHeart, BiListUl, BiUser } from "react-icons/bi";
-
 import { Link } from 'react-router-dom';
+import { StyledIconLinks } from "./IconLinks.styled";
 
 const i = [<BiHome />, <BiHeart />, <BiListUl />, <BiUser />].map(name => new Icon(name));
 
@@ -11,7 +11,7 @@ function IconsLinks(props) {
     const [icons, setIcons] = useState(i);
 
     function onChangeActive(event) {
-        let elementId = event.target.parentNode.dataset.id
+        let elementId = event.currentTarget.dataset.id
         let elementSelected = icons.map(icon => {
             if (elementId == icon.id) {
                 if (icon.selected) {
@@ -41,7 +41,7 @@ function IconsLinks(props) {
     }
 
     return (
-        <div className="menuLinks">
+        <StyledIconLinks>
             {icons.map(icon => {
                 return (
                     <Link
@@ -53,12 +53,11 @@ function IconsLinks(props) {
 
                         {icon.icon}
                         <div data-id={icon.id}></div>
-
                     </Link>
                 )
 
             })}
-        </div>
+        </StyledIconLinks>
     )
 }
 

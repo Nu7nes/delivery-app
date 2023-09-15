@@ -1,41 +1,52 @@
-import React, { useState } from "react";
-import './Footer.css';
+import React, { useEffect, useState } from "react";
+import { styled } from "styled-components"
+// import './Footer.css';
 import IconsLinks from "./IconLinks";
-import { BiPlus, BiCart } from "react-icons/bi";
+import CartContent from "./CartContent";
+import CartButton from "./CartButton";
 
+const Component = styled.footer`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+    position: fixed;
+    bottom: 0;
+    background-color: var(--secondColor);
+    border-radius: 20px 20px 0 0;
+    border-top: 6px solid var(--bgColor);
+    z-index: 1;
 
-function Footer(props) {
+    >span {
+        width: 100%;
+        height: 100vh;
+        background: rgb(241, 244, 226);
+        background: linear-gradient(180deg, rgba(241, 244, 226, 0) 0%, rgba(255, 254, 255, 1) 27%);
+        opacity: 0;
+        position: absolute;
+        top: -10%;
+        transition: opacity 800ms;
+    }
+`
+
+function Footer() {
 
     const [toggler, setToggler] = useState(false)
+    // useEffect(()=>{console.log(toggler)},[toggler])
 
     function toggleCart() {
-        let state = !toggler
-        setToggler(state);
-    }
-
-    function IconCart() {
-        if (toggler) {
-            return (<BiPlus />)
-        } else {
-            return (<BiCart />)
-        }
+        setToggler(!toggler);
     }
 
     return (
-        <footer className={toggler ? 'activeFooter' : ''}>
-            <span className={toggler ? 'activeFooter' : ''}></span>
-
-            <button onClick={toggleCart} className={toggler ? 'cartToggle activeMove' : 'cartToggle'}>
-                <i></i>
-                <i></i>
-                <div className={toggler ? 'activeRotate' : ''}><IconCart></IconCart></div>
-            </button>
-            <div className={toggler ? 'cartItems show' : 'cartItems'} ></div>
-
-            <div className="menu">
-                <IconsLinks/>
-            </div>
-        </footer>
+        <Component>
+            {/* <span className={toggler ? 'activeFooter' : ''}></span> */}
+            <CartButton onToggleCart={toggleCart} isToggled={toggler} />
+            <CartContent isActive={toggler} />
+            <IconsLinks />
+        </Component>
     )
 }
 

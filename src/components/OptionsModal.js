@@ -11,7 +11,7 @@ import { GrFormClose } from "react-icons/gr";
 const Component = styled.div`
     width: 100%;
     height: 100%;
-    background-color: grey;
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +29,11 @@ const Component = styled.div`
     }
     >form{
         margin: 1rem;
+        >ul{
+            margin-bottom: 1rem;
+        }
     }
+
 `
 
 function OptionsModal({ item, onCloseOptions }) {
@@ -57,13 +61,15 @@ function OptionsModal({ item, onCloseOptions }) {
             <div className="image"></div>
             <h2>{item.flavor}</h2>
             <form onSubmit={handleAddItem}>
-            <h4>Melhore sua pizza!</h4>
-                {item.ingredients.map((ingredient, index) => {
-                    return (<Checkbox key={index}
-                        index={index}
-                        data={ingredient}
-                        onHandleChecked={onHandleChecked} />)
-                })}
+                <h4>Melhore sua pizza!</h4>
+                <ul>
+                    {item.ingredients.map((ingredient, index) => {
+                        return (<Checkbox key={index}
+                            index={index}
+                            data={ingredient}
+                            onHandleChecked={onHandleChecked} />)
+                    })}
+                </ul>
                 <Button type="submit">Adicionar</Button>
             </form>
         </Component>
