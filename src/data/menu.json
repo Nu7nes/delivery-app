@@ -26,7 +26,7 @@
         "Mussarela",
         "Manjericão"
       ],
-      "price": 60.00
+      "price": 52.00
     },
     {
       "id": "02",
@@ -46,7 +46,7 @@
         "Mussarela",
         "Calabresa"
       ],
-      "price": 60.00
+      "price": 50.00
     },
     {
       "id": "04",
@@ -57,7 +57,7 @@
         "Frango desfiado",
         "Catupiry"
       ],
-      "price": 60.00
+      "price": 68.00
     },
     {
       "id": "05",
@@ -69,7 +69,7 @@
         "Gorgonzola",
         "Parmesão"
       ],
-      "price": 60.00
+      "price": 70.00
     },
     {
       "id": "06",
@@ -82,7 +82,7 @@
         "Cebola",
         "Azeitona"
       ],
-      "price": 60.00
+      "price": 68.00
     },
     {
       "id": "07",
@@ -96,7 +96,7 @@
         "Cebola",
         "Azeitona"
       ],
-      "price": 60.00
+      "price": 64.00
     },
     {
       "id": "08",
@@ -106,17 +106,7 @@
         "Mussarela",
         "Bacon"
       ],
-      "price": 60.00
-    },
-    {
-      "id": "09",
-      "flavor": "Marguerita",
-      "ingredients": [
-        "Molho de tomate",
-        "Mussarela",
-        "Manjericão"
-      ],
-      "price": 60.00
+      "price": 58.00
     },
     {
       "id": "10",
@@ -129,7 +119,7 @@
         "Cebola",
         "Pimentão"
       ],
-      "price": 60.00
+      "price": 66.00
     },
     {
       "id": "11",
@@ -152,7 +142,7 @@
         "Bacon",
         "Cebola"
       ],
-      "price": 60.00
+      "price": 58.00
     },
     {
       "id": "13",
@@ -164,7 +154,7 @@
         "Cebola",
         "Azeitona"
       ],
-      "price": 60.00
+      "price": 56.00
     },
     {
       "id": "14",
@@ -174,7 +164,7 @@
         "Leite condensado",
         "Granulado"
       ],
-      "price": 60.00
+      "price": 56.00
     },
     {
       "id": "15",
@@ -184,7 +174,7 @@
         "Canela",
         "Açúcar"
       ],
-      "price": 60.00
+      "price": 59.00
     },
     {
       "id": "16",
@@ -195,7 +185,7 @@
         "Rúcula",
         "Tomate seco"
       ],
-      "price": 60.00
+      "price": 53.00
     },
     {
       "id": "17",
@@ -205,7 +195,7 @@
         "Mussarela",
         "Alho frito"
       ],
-      "price": 60.00
+      "price": 53.00
     },
     {
       "id": "18",
@@ -217,7 +207,7 @@
         "Manjericão",
         "Azeite de oliva"
       ],
-      "price": 60.00
+      "price": 67.00
     },
     {
       "id": "19",
@@ -229,19 +219,7 @@
         "Cebola",
         "Azeitona"
       ],
-      "price": 60.00
-    },
-    {
-      "id": "20",
-      "flavor": "Três Carnes",
-      "ingredients": [
-        "Molho de tomate",
-        "Mussarela",
-        "Calabresa",
-        "Bacon",
-        "Pepperoni"
-      ],
-      "price": 60.00
+      "price": 70.00
     }
   ]
 }

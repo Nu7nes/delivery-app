@@ -53,6 +53,7 @@ function OptionsModal({ item, onCloseOptions }) {
         const selecteItems = ingredients.filter((item, index) => itensCopy[index] ? item : '')
         const newItem = new Item(item.id, selecteItems)
         dispatch(add(JSON.stringify(newItem)))
+        onCloseOptions()
     }
 
     return (

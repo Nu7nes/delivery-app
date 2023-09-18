@@ -14,11 +14,14 @@ export const cartSlice = createSlice({
             state.items.push(payload)
         },
         remove: (state, { payload }) => {
-            state.items.map(item => item.id !== payload)
+            state.items.splice(payload, 1);
+        },
+        endOrder: (state) => {
+            state.items = [];
         }
     }
 })
 
-export const { add, remove } = cartSlice.actions
+export const { add, remove, endOrder } = cartSlice.actions
 
 export default cartSlice.reducer

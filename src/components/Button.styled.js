@@ -7,6 +7,8 @@ const Button = styled.button`
     border: none;
     border-radius: 0.2rem;
     padding: 0.5rem;
+    display: grid;
+    place-content: center;
 `
 
 export default Button

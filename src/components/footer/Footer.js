@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components"
-// import './Footer.css';
 import IconsLinks from "./IconLinks";
 import CartContent from "./CartContent";
 import CartButton from "./CartButton";
@@ -44,7 +43,7 @@ function Footer() {
         <Component>
             {/* <span className={toggler ? 'activeFooter' : ''}></span> */}
             <CartButton onToggleCart={toggleCart} isToggled={toggler} />
-            <CartContent isActive={toggler} />
+            <CartContent onToggleCart={toggleCart} isActive={toggler} />
             <IconsLinks />
         </Component>
     )

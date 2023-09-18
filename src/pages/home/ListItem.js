@@ -7,12 +7,18 @@ function ListItem({ item }) {
 
     const [options, setOptions] = useState(false)
     function onCloseOptions(e) {
-        const target = e.currentTarget.id
-        if (options) {
-            if (target === 'close') setOptions(!options)
+        if(e){
+            if(!e.currentTarget) return
+            const target = e.currentTarget.id
+            if (options) {
+                if (target === 'close') setOptions(!options)
+            } else {
+                setOptions(!options)
+            }
         } else {
             setOptions(!options)
         }
+
     }
 
     return (

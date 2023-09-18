@@ -39,6 +39,7 @@ export const StyledIconLinks = styled.div`
     .activeContrastIcon {
         transform: translateY(-15%);
         transition: 500ms;
+        z-index: -1;
     }
 
     .activeContrastIcon>svg {
