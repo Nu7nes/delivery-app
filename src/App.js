@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-
+import GlobalStyled from "./styles/Global.styled";
 import PublicApp from "./PublicApp";
 import AdminApp from "./admin/AdminApp";
 
@@ -13,7 +13,8 @@ function App() {
 
     return (
         <BrowserRouter>
-                {isAdmin ? <AdminApp /> : <PublicApp />}
+            {isAdmin ? <AdminApp /> : <PublicApp />}
+            <GlobalStyled />
         </BrowserRouter>
     )
 }
