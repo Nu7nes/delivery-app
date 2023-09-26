@@ -2,11 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { styled } from "styled-components"
 import { BiTrash } from "react-icons/bi";
-import { FormatPrices } from "../Formatation"
-import dataMenu from "../../data/menu.json"
-import Button from "../Button.styled";
+import { FormatPrices } from "../../../Formatation"
+import dataMenu from "../../../../data/menu.json"
+import Button from "../../../Button.styled";
 import { useDispatch } from "react-redux";
-import { remove } from "../../redux/slices/cartSlice";
+import { remove } from "../../../../redux/slices/cartSlice";
 
 const Component = styled.div`
     display: flex;

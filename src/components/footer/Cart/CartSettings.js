@@ -1,7 +1,7 @@
 import React from "react";
 import {styled} from "styled-components"
-import SettingsAddress from "./SettingsAddress"
-import SettingsPayment from "./SettingsPayment"
+import SettingsAddress from "./CartAddress/SettingsAddress"
+import SettingsPayment from "./CartPayments/SettingsPayment"
 
 const Component = styled.div`
 

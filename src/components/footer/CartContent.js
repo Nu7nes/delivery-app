@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { styled } from "styled-components";
-import CartItem from "./CartItem";
-import CartResume from "./CartResume";
-import CartSettings from "./CartSettings";
-import CartEmptyMessage from "./CartEmptyMessage";
+import CartItem from "./Cart/CartContent/CartItem";
+import CartResume from "./Cart/CartResume";
+import CartSettings from "./Cart/CartSettings";
+import CartEmptyMessage from "./Cart/CartContent/CartEmptyMessage";
 
 const Component = styled.div`
         width: 100%;

@@ -1,12 +1,12 @@
 import React from "react";
 import { styled } from "styled-components"
-import { FormatPrices } from "../Formatation";
-import Button from "../Button.styled"
+import { FormatPrices } from "../../Formatation";
+import Button from "../../Button.styled"
 import { useDispatch, useSelector } from "react-redux";
-import data from "../../data/menu.json"
-import Order from "./Order";
-import { add } from "../../redux/slices/orderSlice";
-import { endOrder } from "../../redux/slices/cartSlice";
+import data from "../../../data/menu.json"
+import Order from "../Order";
+import { add } from "../../../redux/slices/orderSlice";
+import { endOrder } from "../../../redux/slices/cartSlice";
 
 const Component = styled.div`
     width: 100vw;

@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './PublicApp.css';
-import Header from './components/heading/Header';
+// import Header from './components/heading/Header';
 import Content from './components/content/Content';
 import Footer from './components/footer/Footer';
 import DATA from './DATA'
@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className='container'>
-      {/* <Header info={DATA}></Header> */}
       <Content data={data}></Content>
       <Footer></Footer>
     </div>
